@@ -1,16 +1,32 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class Chasing : MonoBehaviour
+public class Chasing : State
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+
+    
+
+    public Chasing(SnakeHead enemP, StateMachine sm) : base(enemP, sm)
     {
-        
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Enter()
     {
-        
+
+        agent = GameObject.FindWithTag("Snake").GetComponent<NavMeshAgent>();
+        targetPositionTransform = player.transform;
+    }
+
+    public override void Exit()
+    {
+
+
+
+    }
+
+    public override void Update()
+    {
+        agent.destination = targetPositionTransform.position;
     }
 }

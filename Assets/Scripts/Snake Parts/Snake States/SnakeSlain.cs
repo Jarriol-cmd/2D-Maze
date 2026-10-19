@@ -1,16 +1,27 @@
 using UnityEngine;
 
-public class SnakeSlain : MonoBehaviour
+public class SnakeSlain : State
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public SnakeSlain(SnakeHead enemP, StateMachine sm) : base(enemP, sm)
     {
-        
+    }
+    public override void Enter()
+    {
+
+
+
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void Exit()
     {
-        
+
+
+
+    }
+
+
+    public override void Update()
+    {
+
     }
 }
