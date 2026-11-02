@@ -17,7 +17,7 @@ public class Chasing : State
         agent = GameObject.FindWithTag("Snake").GetComponent<NavMeshAgent>();
         targetPositionTransform = GameObject.FindWithTag("Player").transform;
 
-        agent.speed = 1;
+        agent.speed = 3.5f;
 
         enemP.moving = true;
     }
