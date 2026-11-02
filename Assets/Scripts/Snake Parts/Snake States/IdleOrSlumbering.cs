@@ -33,8 +33,6 @@ public class IdleOrSlumbering : State
         {
             sm.ChangeState(sm.huntingState);
         }
-
-        Debug.Log(distance);
     }
 
 }

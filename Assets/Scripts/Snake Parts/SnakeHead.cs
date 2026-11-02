@@ -5,19 +5,22 @@ public class SnakeHead : MonoBehaviour
 {
     StateMachine sm;
 
-    
+    public bool moving;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         sm = new StateMachine(this);
         sm.Init(sm.idleState);
+
     }
 
     // Update is called once per frame
     void Update()
     {
         sm.Update();
+
+
         
     }
 
